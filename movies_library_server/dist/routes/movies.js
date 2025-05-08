@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rotaMovies = void 0;
+const express_1 = require("express");
+const moviesControl_1 = require("../controls/moviesControl");
+exports.rotaMovies = (0, express_1.Router)();
+exports.rotaMovies.get("/", moviesControl_1.handleGet);
+exports.rotaMovies.get("/:id", moviesControl_1.handleGetId);
+exports.rotaMovies.post("/", moviesControl_1.handleAdd);
+exports.rotaMovies.patch("/", moviesControl_1.handlePatch);
+exports.rotaMovies.delete("/:id", moviesControl_1.handleDelete);
