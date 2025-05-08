@@ -48,10 +48,6 @@ export const MovieBoxModal = ({
     await getUpdatedMovies();
   };
 
-  const editMovie = () => {
-    setIsEditing((prevState) => !prevState);
-  };
-
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewTitle(e.target.value);
   };
@@ -79,6 +75,14 @@ export const MovieBoxModal = ({
     }
   };
 
+  const editMovie = () => {
+    if (isEditing) {
+      handleSave();
+    } else {
+      setIsEditing(true);
+    }
+  };
+
   return (
     <div className={style.focusItem}>
       {id && (
@@ -96,12 +100,12 @@ export const MovieBoxModal = ({
                     type="text"
                     value={newTitle}
                     onChange={handleTitleChange}
+                    className={style.editInput}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
-                        handleSave();
+                        editMovie();
                       }
                     }}
-                    className={style.editInput}
                   />
                   <input
                     type="text"
@@ -111,7 +115,7 @@ export const MovieBoxModal = ({
                     className={style.editInput}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
-                        handleSave();
+                        editMovie();
                       }
                     }}
                   />
@@ -122,8 +126,10 @@ export const MovieBoxModal = ({
               <button onClick={editMovie} className={style.editButton}>
                 <img
                   className={style.editButtonimg}
-                  src="assets/imgs/edit.svg"
-                  alt="Editar"
+                  src={
+                    isEditing ? "assets/imgs/save.svg" : "assets/imgs/edit.svg"
+                  }
+                  alt={isEditing ? "Salvar" : "Editar"}
                 />
               </button>
             </div>

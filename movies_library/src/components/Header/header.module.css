@@ -59,6 +59,7 @@ header {
 .menu_hamburguer {
   max-width: 48px;
   display: none;
+  object-fit: fill;
 }
 
 .menu {
@@ -76,6 +77,9 @@ header {
 }
 
 @media (max-width: 1024px) {
+  header {
+    padding: 4px 24px 4px 12px;
+  }
   .linksHeader {
     gap: 32px;
     font-size: 15;
@@ -89,6 +93,9 @@ header {
   }
 }
 @media (max-width: 768px) {
+  header {
+    padding: 4px 24px 4px 12px;
+  }
   .linksHeader {
     display: none;
   }

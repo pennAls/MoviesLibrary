@@ -39,6 +39,7 @@
   }
 
   .card:hover {
-    height: 400px;
+    width: 150px;
+    height: 250px;
   }
 }

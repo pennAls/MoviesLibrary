@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { searchedMoviesListContext } from "../../App/App";
 import AddButton from "../Buttons/AddButton";
 import { Carrossel } from "../Carrossel/Carrossel";
 import SearchInput from "../SearchInput";
 import style from "./hero.module.css";
+import SearchResults from "../SearchResults";
 
 export const HeroSection = () => {
+  const { searchedMoviesList } = useContext(searchedMoviesListContext);
   return (
     <section className={style.hero}>
       <div className={style.halfOne}>
@@ -22,6 +26,7 @@ export const HeroSection = () => {
       <div className={style.halfTwo}>
         <Carrossel></Carrossel>
         <SearchInput style={style.inputHero}></SearchInput>
+        {searchedMoviesList.length > 0 && <SearchResults />}
       </div>
     </section>
   );
