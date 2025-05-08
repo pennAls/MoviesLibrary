@@ -1,0 +1,44 @@
+.carrossel {
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 48px;
+  transition: width 0.5s;
+}
+
+.card:hover {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .carrossel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    overflow-x: visible;
+    justify-items: center;
+    align-items: center;
+    margin: 0px 0px 24px 0px;
+  }
+
+  .card {
+    width: 150px;
+    height: 250px;
+    transition: transform 0.5s ease;
+  }
+
+  .card:hover {
+    height: 400px;
+  }
+}

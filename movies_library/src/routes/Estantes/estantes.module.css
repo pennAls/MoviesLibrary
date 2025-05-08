@@ -1,0 +1,9 @@
+.estantes {
+  display: flex;
+  padding: 24px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 128px;
+}

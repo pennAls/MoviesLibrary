@@ -1,0 +1,13 @@
+.searchResultsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .searchResultsBox {
+    margin-top: 128px;
+  }
+}

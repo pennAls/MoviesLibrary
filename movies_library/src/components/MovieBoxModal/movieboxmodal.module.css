@@ -1,0 +1,48 @@
+.imgModal {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+  object-fit: cover;
+}
+
+.focusItem {
+  background-color: 181818;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.closeButton {
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  background: white;
+  border-radius: 8px;
+  color: #002f52;
+  font-size: 16px;
+  text-align: center;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.halfone {
+  margin: 0;
+  padding: 0;
+}
+
+.halftwo {
+  position: relative;
+  border: none;
+  width: 100%;
+  background-color: #001836;
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 16px 24px 24px 24px;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}

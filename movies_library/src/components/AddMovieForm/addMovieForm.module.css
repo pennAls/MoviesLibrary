@@ -1,0 +1,42 @@
+.addForm {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 16px;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.inputForm {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 16px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.addButtonForm {
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 16px;
+  cursor: pointer;
+  border: none;
+  background: #1c274c;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-weight: 600;
+  padding: 16px;
+}
+.addButtonForm:hover {
+  background-color: white;
+  color: #1c274c;
+}

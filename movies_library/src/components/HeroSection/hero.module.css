@@ -1,0 +1,102 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 184px 184px 64px 184px;
+  flex-direction: row;
+}
+
+.halfOne,
+.halfTwo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.halfOne {
+  margin-right: 24px;
+}
+
+.halfTwo {
+  margin-left: 24px;
+}
+
+.boxTitle {
+  display: flex;
+}
+
+.title {
+  color: white;
+  background-color: transparent;
+  margin: 0;
+}
+
+.subtitle {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 0px 24px;
+}
+
+.logo {
+  width: 72px;
+  min-width: 72px;
+  max-width: 72px;
+  flex-shrink: 0;
+  margin: 0px;
+}
+
+.inputHero {
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 20px 140px;
+  border-radius: 50px;
+  max-width: 200px;
+  min-width: 100px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+
+  &::placeholder {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.inputHero:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: 100vh;
+    padding: 24px;
+    margin: 0px;
+    justify-content: flex-start;
+  }
+  .halfOne,
+  .halfTwo {
+    width: 100%;
+    margin: 0px;
+    align-items: normal;
+  }
+
+  .boxTitle {
+    align-items: center;
+  }
+
+  .subtitle {
+    padding: 0px;
+    text-align: left;
+  }
+
+  .inputHero {
+    max-width: 100%;
+    padding: 20px;
+  }
+}

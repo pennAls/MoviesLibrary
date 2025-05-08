@@ -1,0 +1,25 @@
+.Addbutton {
+  cursor: pointer;
+  border: none;
+  background: white;
+  border-radius: 8px;
+  padding: 16px 128px;
+  color: #1c274c;
+  font-size: 18px;
+  text-align: center;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 48px;
+}
+
+.Addbutton:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .Addbutton {
+    padding: 16px 48px;
+  }
+}

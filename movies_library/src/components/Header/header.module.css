@@ -1,0 +1,103 @@
+header {
+  background-color: white;
+  box-shadow: 0 4px 24px rgba(17, 18, 18, 0.1);
+  padding: 4px 24px 4px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.divHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  max-width: 48px;
+}
+
+.pTypographyHeader {
+  font-size: 24px;
+  color: #1c274c;
+  font-family: "Shafarik", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.linksHeader {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  height: 100%;
+  padding-left: 64px;
+  cursor: pointer;
+  gap: 64px;
+}
+
+.iconesHeader {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.icone {
+  margin-right: 40px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.headerOption:hover {
+  color: #6fa7eb;
+}
+
+.dropDown {
+  display: none;
+}
+
+.menu_hamburguer {
+  max-width: 48px;
+  display: none;
+}
+
+.menu {
+  background-color: white;
+  height: 100vh;
+  z-index: 1000;
+  box-shadow: 0 4px 24px rgba(17, 18, 18, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.noStyle {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1024px) {
+  .linksHeader {
+    gap: 32px;
+    font-size: 15;
+  }
+  .icone {
+    margin-right: 30px;
+    width: 20px;
+  }
+  logo {
+    max-width: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .linksHeader {
+    display: none;
+  }
+  .menu_hamburguer {
+    display: initial;
+  }
+}
+@media (max-width: 520px) {
+  .iconesHeader {
+    display: none;
+  }
+}
