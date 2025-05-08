@@ -122,7 +122,7 @@ export const MovieBoxModal = ({
               <button onClick={editMovie} className={style.editButton}>
                 <img
                   className={style.editButtonimg}
-                  src="src/assets/imgs/edit.svg"
+                  src="assets/imgs/edit.svg"
                   alt="Editar"
                 />
               </button>
