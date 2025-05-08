@@ -2,7 +2,7 @@ import axios from "axios";
 import { moviesType } from "../types/moviesType";
 
 const moviesLibraryAPI = axios.create({
-  baseURL: "http://localhost:8000/movies/",
+  baseURL: "https://movieslibraryserver.onrender.com/movies",
 });
 
 const getMovies = async () => {
