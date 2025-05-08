@@ -1,8 +1,8 @@
 import { useState } from "react";
 import style from "./header.module.css";
-import sacola from "/src/assets/imgs/sacola.svg";
-import perfil from "/src/assets/imgs/perfil.svg";
-import hamburguerMenu from "/src/assets/imgs/hamburger-menu.svg";
+import sacola from "/assets/imgs/sacola.svg";
+import perfil from "/assets/imgs/perfil.svg";
+import hamburguerMenu from "/assets/imgs/hamburger-menu.svg";
 import { ConfigProvider, Menu, MenuProps } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -81,7 +81,7 @@ export const Header = () => {
         <div className={style.divHeader}>
           <img
             className={style.logo}
-            src="src/assets/imgs/video-library.svg"
+            src="assets/imgs/video-library.svg"
             alt="Logo"
           />
           <p className={style.pTypographyHeader}>

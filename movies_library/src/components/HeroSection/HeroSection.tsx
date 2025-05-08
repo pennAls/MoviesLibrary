@@ -8,11 +8,7 @@ export const HeroSection = () => {
     <section className={style.hero}>
       <div className={style.halfOne}>
         <div className={style.boxTitle}>
-          <img
-            className={style.logo}
-            src="src/assets/imgs/logo2.png"
-            alt="Logo"
-          />
+          <img className={style.logo} src="/assets/imgs/logo2.png" alt="Logo" />
           <h1 className={style.title}>
             Movies<strong>Library</strong>
           </h1>

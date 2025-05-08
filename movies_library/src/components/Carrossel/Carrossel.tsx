@@ -3,16 +3,16 @@ import style from "./carrossel.module.css";
 export const Carrossel = () => {
   const movies = [
     {
-      src: "src/assets/imgs/matrix.jpg",
+      src: "assets/imgs/matrix.jpg",
     },
     {
-      src: "src/assets/imgs/lalaland.png",
+      src: "assets/imgs/lalaland.png",
     },
     {
-      src: "src/assets/imgs/hym.jpg",
+      src: "assets/imgs/hym.jpg",
     },
     {
-      src: "src/assets/imgs/fullmetal.webp",
+      src: "assets/imgs/fullmetal.webp",
     },
   ];
 
