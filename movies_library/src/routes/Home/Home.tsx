@@ -1,31 +1,16 @@
-import { createContext, useState } from "react";
+import { useContext } from "react";
 import "./home.css";
 import HeroSection from "../../components/HeroSection";
-import { moviesType } from "../../types/moviesType";
 import SearchResults from "../../components/SearchResults";
+import { searchedMoviesListContext } from "../../App/App";
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const searchContext = createContext<{
-  searchedMovies: moviesType[];
-  setSearchedMovies: (searchedMovies: moviesType[]) => void;
-}>({
-  searchedMovies: [],
-  setSearchedMovies: () => [],
-});
-
-const Home = () => {
-  const [searchedMovies, setSearchedMovies] = useState<moviesType[]>([]);
+export const Home = () => {
+  const { searchedMoviesList } = useContext(searchedMoviesListContext);
 
   return (
-    <searchContext.Provider value={{ searchedMovies, setSearchedMovies }}>
-      <div className="App">
-        <HeroSection />
-        {searchedMovies.length > 0 && (
-          <SearchResults searchedMovies={searchedMovies} />
-        )}
-      </div>
-    </searchContext.Provider>
+    <div className="App">
+      <HeroSection />
+      {searchedMoviesList.length > 0 && <SearchResults />}
+    </div>
   );
 };
-
-export default Home;

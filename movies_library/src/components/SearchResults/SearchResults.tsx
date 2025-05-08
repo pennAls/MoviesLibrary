@@ -1,15 +1,14 @@
-import { moviesType } from "../../types/moviesType";
+import { useContext } from "react";
 import MovieBox from "../MovieBox";
 import style from "./searchresults.module.css";
+import { searchedMoviesListContext } from "../../App/App";
 
-export const SearchResults = ({
-  searchedMovies,
-}: {
-  searchedMovies: moviesType[];
-}) => {
+export const SearchResults = () => {
+  const { searchedMoviesList } = useContext(searchedMoviesListContext);
+
   return (
     <div className={style.searchResultsBox}>
-      {searchedMovies.map((movie) => (
+      {searchedMoviesList.map((movie) => (
         <MovieBox
           key={movie.id}
           src={movie.src}

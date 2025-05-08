@@ -44,3 +44,6 @@
   font-size: 1rem;
   margin: 0;
 }
+.ant-modal-mask {
+  cursor: pointer;
+}

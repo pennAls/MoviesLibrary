@@ -24,7 +24,7 @@ export const MovieBox = ({
     setTimeout(() => {
       setOpen(false);
       setConfirmLoading(false);
-    }, 100);
+    });
   };
 
   const handleCancel = () => {
@@ -46,8 +46,9 @@ export const MovieBox = ({
         onCancel={handleCancel}
         footer={null}
         centered
+        maskClosable={true}
       >
-        <MovieBoxModal id={id} closeModal={() => handleOk()}></MovieBoxModal>
+        <MovieBoxModal id={id} src={src} title={title} closeModal={handleOk} />
       </Modal>
     </div>
   );

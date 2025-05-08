@@ -16,7 +16,7 @@ export const AddButton = () => {
     setTimeout(() => {
       setOpen(false);
       setConfirmLoading(false);
-    }, 1000);
+    }, 500);
   };
 
   const handleCancel = () => {

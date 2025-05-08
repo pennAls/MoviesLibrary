@@ -7,7 +7,7 @@ const moviesLibraryAPI = axios.create({
 
 const getMovies = async () => {
   try {
-    const response = await moviesLibraryAPI.get("/");
+    const response = await moviesLibraryAPI.get("");
     return response.data;
   } catch (error) {
     console.log(error);
@@ -35,4 +35,27 @@ const getbyID = async (id: string) => {
   }
 };
 
-export { getMovies, addMovies, getbyID };
+const deleteMovie = async (id: string) => {
+  try {
+    await moviesLibraryAPI.delete(`/${id}`);
+  } catch (error) {
+    console.error("Erro ao deletar filme:", error);
+  }
+};
+
+const patchMovie = async (id: string, selectedMovie: moviesType) => {
+  try {
+    const response = await moviesLibraryAPI.patch("", {
+      nome: selectedMovie.nome,
+      src: selectedMovie.src,
+      id: id,
+    });
+
+    return response;
+  } catch (error) {
+    console.error("Erro ao editar filme:", error);
+    throw error;
+  }
+};
+
+export { getMovies, addMovies, getbyID, deleteMovie, patchMovie };

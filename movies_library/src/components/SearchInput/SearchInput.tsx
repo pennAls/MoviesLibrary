@@ -1,10 +1,15 @@
 import { moviesType } from "../../types/moviesType.ts";
-import { useContext } from "react";
-import { searchContext } from "../../routes/Home/Home.tsx";
+import { useContext, useEffect } from "react";
+
 import { getMovies } from "../../services/moviesService.ts";
+import { searchedMoviesListContext } from "../../App/App.tsx";
 
 export const SearchInput = ({ style }: CSSModuleClasses) => {
-  const { setSearchedMovies } = useContext(searchContext);
+  const { setsearchedMovies } = useContext(searchedMoviesListContext);
+
+  useEffect(() => {
+    setsearchedMovies([]);
+  }, [setsearchedMovies]);
 
   return (
     <>
@@ -13,14 +18,15 @@ export const SearchInput = ({ style }: CSSModuleClasses) => {
         onChange={async (e) => {
           const pesquisaUser = e.target.value;
           if (pesquisaUser === "") {
-            setSearchedMovies([]);
+            setsearchedMovies([]);
           } else {
-            const seachedMoviesList = await getMovies();
-            const resultadoPesquisa = seachedMoviesList.filter(
+            const searchedMoviesList = await getMovies();
+            const resultadoPesquisa = searchedMoviesList.filter(
               (movie: moviesType) =>
                 movie.nome.toLowerCase().includes(pesquisaUser.toLowerCase())
             );
-            setSearchedMovies(resultadoPesquisa);
+            setsearchedMovies(resultadoPesquisa);
+            sessionStorage.setItem("userInput", pesquisaUser);
           }
         }}
         placeholder="Qual o seu próximo filme?"
