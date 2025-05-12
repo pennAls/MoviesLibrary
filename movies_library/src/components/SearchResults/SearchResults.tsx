@@ -7,7 +7,7 @@ export const SearchResults = () => {
   const { searchedMoviesList } = useContext(searchedMoviesListContext);
 
   return (
-    <div className={style.searchResultsBox}>
+    <section className={style.searchResultsBox}>
       {searchedMoviesList.map((movie) => (
         <MovieBox
           key={movie.id}
@@ -16,6 +16,6 @@ export const SearchResults = () => {
           id={movie.id}
         />
       ))}
-    </div>
+    </section>
   );
 };
